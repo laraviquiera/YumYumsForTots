@@ -1,5 +1,5 @@
-const Meal = require('../models/meal');  //import meal model
-const Plan = require('../models/meal').Plan; //import plan model
+const Meal = require('../models/meal');
+
 
 module.exports = {
     index
@@ -7,11 +7,10 @@ module.exports = {
 
 async function index(req, res) {
     try {
-        const allMeals = await Meal.find(); //fetch all meals from the database
-        const allPlans = await Plan.find(); //featch all planss from the database
+        const allMeals = await Meal.find(); 
 
         //render a view passing fetched meals and plans to the view template
-        res.render('index', { meals: allMeals, plans: allPlans });
+        res.render('index', { meals: allMeals });
     } catch (err) {
         console.log(err);
         res.render('meals/index', { errorMsg: error.message })
