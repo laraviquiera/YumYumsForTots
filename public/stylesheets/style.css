@@ -56,12 +56,26 @@ a {
   height: 30px;
 }
 
-.welcome-page {
-  margin-top: 70vh;
+/* .welcome-page {
+  margin: 10vh;
   display: flexbox;
   flex-wrap: nowrap;
   text-align: center;
   font-size: 40px;
   color: rgb(72, 70, 70);
-  padding: 30px;
+  padding: 50px;
+} */
+
+.welcome-page {
+  margin: 10vh;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(72, 70, 70);
+  padding: 80px 200px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }

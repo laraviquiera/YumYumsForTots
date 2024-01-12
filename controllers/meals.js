@@ -10,7 +10,7 @@ async function index(req, res) {
         const allMeals = await Meal.find(); 
 
         //render a view passing fetched meals and plans to the view template
-        res.render('index', { title: 'All Meals', meals: allMeals });
+        res.render('index', { title: 'Home Page', meals: allMeals });
     } catch (err) {
         console.log(err);
         res.render('meals/index', { errorMsg: error.message })
