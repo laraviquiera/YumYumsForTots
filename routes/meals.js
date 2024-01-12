@@ -4,5 +4,6 @@ const mealsCtrl = require('../controllers/meals');
 
 //GET /meals
 router.get('/', mealsCtrl.index);
+//GET /
 
 module.exports = router;
