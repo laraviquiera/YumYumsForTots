@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: Helvetica;
+  color: #002d36;
 }
 
 body {
@@ -27,30 +29,39 @@ a {
 
 .nav ul {
   list-style-type: none;
-  margin: 15px;
+  margin: 15px 40px;
   padding: 0;
-  display: flex; /* Display list items as flex for horizontal layout */
+  display: flex; /* horizontal layout */
+  align-items: center;
 }
 
 .nav li {
-  margin: 0 10px; /* Adjust margin for spacing between items */
+  margin: 40px 80px; /* Adjust margin for spacing between items */
 }
 
 .nav a {
   color: rgb(72, 70, 70);
-  font-size: 15px;
+  font-size: 40px;
 }
+
 
 .login {
-  margin-left: auto; /* Push the login link to the far right */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
 }
 
-p {
+.login img {
+  height: 30px;
+}
+
+.welcome-page {
+  margin-top: 70vh;
   display: flexbox;
   flex-wrap: nowrap;
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
   color: rgb(72, 70, 70);
-  padding: 40px;
-  margin: 0 auto;
+  padding: 30px;
 }

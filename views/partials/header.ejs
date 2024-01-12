@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="icon" type="image/png" href="https://i.imgur.com/Zr8tTVV.png">
+    <title><%= title %></title>
   </head>
   <body>
+
     <div class="main-logo">
-      <img src="https://i.imgur.com/3n2e3Bs.png" alt="Yum Yums Logo">
+      <img src="https://i.imgur.com/3n2e3Bs.png" alt="Yum Yums Logo" height="150px">
     </div>
     
     <nav class="nav">
-      <ul>
-        <li>
-         <a href="/">HOME</a>
-        </li>
-          | 
-        <li>
-          <a href="/meals">VIEW ALL</a>
-        </li>
-          | 
-        <li>
-          <a href="/meals/favorites">FAVORITES</a>
-        </li>
-          | 
-        <li>
+        <ul>
+         <li>
+        <a href="/">HOME</a>
+         </li>  
+        <% if (user) { %>
+         <li>
+          <a href="/meals">ALL MEALS</a>
+         </li>
+         <li>
           <a href="/meals/planner">MEAL PLANNER</a>
         </li>
-        <li class="login">
-          <a href="/login">LOG IN</a>
+        <li>
+          <a href="/meals/new">ADD A MEAL</a>
         </li>
-      </ul>
+         <li>
+          <a href="/logout">LOG OUT</a>
+         </li>
+        </ul>
+        <% } else { %>
+      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"</a>
+      <% } %>
     </nav>
-    <main>
+<main>
+        
  
