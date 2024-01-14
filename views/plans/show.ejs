@@ -1,0 +1,63 @@
+<%- include('../partials/header') %>
+
+<h1>Weekly Meal Planner</h1>
+
+<div>
+    <label for="plan-name">Plan Name:</label>
+    <input type="text" placeholder="e.g. Week of Jan 22">
+    <input type="submit" value="Save Plan Name">
+</div>
+
+    <div class="meal-grid">
+      <div class="meal-cell"> </div>
+      <div class="meal-cell">Monday</div>
+      <div class="meal-cell">Tuesday</div>
+      <div class="meal-cell">Wednesday</div>
+      <div class="meal-cell">Thursday</div>
+      <div class="meal-cell">Friday</div>
+      <div class="meal-cell">Saturday</div>
+      <div class="meal-cell">Sunday</div>
+      
+      <div class="meal-cell">Breakfast</div>
+      <div class="meal-cell">
+        <select>
+          <option>--select--</option>
+          <option>Dish 1</option>
+          <option>Dish 2</option>
+        </select>
+      </div>
+
+      <div class="meal-cell">Lunch</div>
+      <!-- Dropdown for Lunch -->
+      <div class="meal-cell">
+        <select>
+          <option>--select--</option>
+          <option>Dish 1</option>
+          <option>Dish 2</option>
+        </select>
+      </div>
+  
+      <div class="meal-cell">Dinner</div>
+      <!-- Dropdown for Dinner -->
+      <div class="meal-cell">
+        <select>
+          <option>--select--</option>
+          <option>Dish 1</option>
+          <option>Dish 2</option>
+        </select>
+      </div>
+  
+      <div class="meal-cell">Snack</div>
+      <!-- Dropdown for Snack -->
+      <div class="meal-cell">
+        <select>
+          <option>--select--</option>
+          <option>Dish 1</option>
+          <option>Dish 2</option>
+        </select>
+      </div>
+    </div>
+
+<h3>MY PLANS</h3>
+
+<%- include('../partials/footer') %>

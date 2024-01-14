@@ -24,24 +24,24 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10;
+  padding: 20;
 }
 
 .nav ul {
   list-style-type: none;
-  margin: 15px 40px;
+  margin: 15px 20px;
   padding: 0;
   display: flex; /* horizontal layout */
   align-items: center;
 }
 
 .nav li {
-  margin: 40px 80px; /* Adjust margin for spacing between items */
+  margin: 40px 40px; /* Adjust margin for spacing between items */
 }
 
 .nav a {
-  color: rgb(72, 70, 70);
-  font-size: 40px;
+  color: rgb(11, 120, 150);
+  font-size: 15px;
 }
 
 
@@ -53,29 +53,41 @@ a {
 }
 
 .login img {
-  height: 30px;
+  height: 15px;
 }
 
-/* .welcome-page {
-  margin: 10vh;
-  display: flexbox;
-  flex-wrap: nowrap;
-  text-align: center;
-  font-size: 40px;
-  color: rgb(72, 70, 70);
-  padding: 50px;
-} */
-
 .welcome-page {
-  margin: 10vh;
+  margin: 5vh;
   display: flexbox;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 40px;
+  font-size: 20px;
   color: rgb(72, 70, 70);
-  padding: 80px 200px;
+  padding: 70px 50px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+/* MEAL PLANNER SECTION */
+
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 1px;
+}
+
+.meal-cell {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

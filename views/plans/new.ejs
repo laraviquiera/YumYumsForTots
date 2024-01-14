@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+
+//Add a dish form
+<h2> Add a dish</h2>
+
+<form id="new-form" action="/meals/planner" method="POST">
+  <label>Dish Name:</label>
+  <input type="text" name="name">
+  <label>Dish URL Link (optional):</label>
+  <input type="text" name="referenceURL">
+  <label>Meal Type:</label>
+  <select name="mealType">
+    <option value="Breakfast">Breakfast</option>
+    <option value="Lunch">Lunch</option>
+    <option value="Dinner">Dinner</option>
+    <option value="Snack">Snack</option>
+  </select>
+  <input type="submit" value="Add a Dish" >
+</form>
+
+<%- include('../partials/footer') %>

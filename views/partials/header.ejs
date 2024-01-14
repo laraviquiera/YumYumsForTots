@@ -7,24 +7,21 @@
   </head>
   <body>
     <div class="main-logo">
-      <img src="https://i.imgur.com/3n2e3Bs.png" alt="Yum Yums Logo" height="150px">
+      <img src="https://i.imgur.com/3n2e3Bs.png" alt="Yum Yums Logo">
     </div>
     
     <nav class="nav">
         <ul>
          <li>
-        <a href="/">HOME</a>
+        <a href="/">HOME</a> 
          </li>  
         <% if (user) { %>
-         <li>
-          <a href="/meals">ALL MEALS</a>
-         </li>
-         <li>
-          <a href="/meals/planner">MEAL PLANNER</a>
-        </li>
-        <li>
-          <a href="/meals/new">ADD A MEAL</a>
-        </li>
+          <li>
+            <a href="/meals">VIEW ALL</a> 
+           </li>
+          <li>
+            <a href="/plans">MEAL PLANNER</a>  
+          </li>
          <li>
           <a href="/logout">LOG OUT</a>
          </li>
