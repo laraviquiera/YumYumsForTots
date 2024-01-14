@@ -2,10 +2,10 @@ const Plan = require('../models/plan');
 const Meal = require('../models/meal');
 
 module.exports = {
-    create,
+    index
 };
 
-async function create(req, res) {
-      const plan = await Plan.find({});
-      res.render('/planner', { title: 'Meal Planner', meals });
+async function index(req, res) {
+      const plans = await Plan.find({});
+      res.render('plans/index', { title: 'Meal Planner', plans });
     }
