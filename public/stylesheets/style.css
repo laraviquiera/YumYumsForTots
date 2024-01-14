@@ -73,21 +73,44 @@ a {
 
 /* MEAL PLANNER SECTION */
 
-.meal-grid {
+.meal-planner {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 1px;
+  grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  padding: 20px;
 }
 
-.meal-cell {
-  border: 1px solid #ccc;
+.day-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #f0f0f0;
   padding: 10px;
-  text-align: center;
 }
 
+.meal-type-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-lr; /* Rotate text vertically */
+  transform: rotate(180deg); /* For Firefox */
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-weight: bold;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.dish-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Style for dropdown (you can customize this) */
 select {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 14px;
 }
