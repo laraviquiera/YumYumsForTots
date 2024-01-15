@@ -1,7 +1,9 @@
 <%- include('../partials/header') %>
 
-<h2> Add a dish</h2>
+<h1 id="add-title">Add your own dish to your planner</h1>
+<p id="note">If you can't find your desired dish on the list. You can add your own and it'll be added to the drop-down menu option</p>
 
+<section>
 <form id="new-form" action="/plans/new" method="POST">
   <label>Dish Name:</label>
   <input type="text" name="name">
@@ -14,7 +16,8 @@
     <option value="Dinner">Dinner</option>
     <option value="Snack">Snack</option>
   </select>
-  <input type="submit" value="Add a Dish" >
 </form>
+<input id="submit" type="submit" value="Add a Dish" >
+</section>
 
 <%- include('../partials/footer') %>
