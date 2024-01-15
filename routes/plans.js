@@ -8,7 +8,9 @@ router.get('/', ensureLoggedIn, plansCtrl.index);
 // GET /new
 router.get('/new', ensureLoggedIn, plansCtrl.new)
 //POST /new
-router.post('/new', ensureLoggedIn, plansCtrl.create);
+router.post('/', ensureLoggedIn, plansCtrl.create);
+//DELETE
+router.delete('/plans/:id', ensureLoggedIn, plansCtrl.delete);
 
 
 module.exports = router;

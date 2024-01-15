@@ -21,18 +21,18 @@
   <div class="day-title">Saturday</div>
   <div class="day-title">Sunday</div>
 
-  <!-- MON BREAKFAST -->
-  <div class="meal-type-title">Breakfast</div>
-  <!-- Dish options for Breakfast -->
-  <div class="dish-options">
-    <select>
-      <!-- Populate with dish options -->
-      <option>Banana-Spinach Pancake</option>
-      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
-    </select>
-  </div>
+<!-- MON BREAKFAST -->
+<div class="meal-type-title">Breakfast</div>
+<!-- Dish options for Breakfast -->
+<div class="dish-options">
+  <select>
+    <option>Banana-Spinach Pancake</option>
+    <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(breakfastMeal => { %>
+      <option value="<%= breakfastMeal._id %>"><%= breakfastMeal.name %></option>
+    <% }); %>
+  </select>
+</div>
+
     <!-- TUE BREAKFAST -->
 
   <div class="dish-options">

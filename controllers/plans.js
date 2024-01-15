@@ -4,8 +4,27 @@ const Meal = require('../models/meal');
 module.exports = {
     index,
     new: newDish,
-    create
+    create,
+    delete: deleteDish
 };
+
+async function deleteDish(req, res) {
+  try {
+    const dishIdToDelete = req.params.id;
+    const deletedDish = await Meal.findById(dishIdToDelete);
+
+    if (!deletedDish) {
+      return res.redirect('/plans');
+    }
+
+    await deletedDish.remove();
+    return res.redirect('/plans');
+  } catch (error) {
+    console.error(error);
+    return res.redirect('/plans');
+  }
+}
+
 
 async function create(req, res) {
   const { name, referenceURL, mealType } = req.body;
@@ -21,7 +40,7 @@ async function create(req, res) {
   });
 
   await newMeal.save();
-  res.redirect('/plans/new');
+  res.redirect('/plans');
 }
 
 
@@ -36,4 +55,3 @@ async function newDish(req, res) {
 
   res.render('plans/new', { errorMsg: '', title: 'Add A New Dish', meals});
  }
-  
