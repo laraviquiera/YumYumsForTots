@@ -63,7 +63,7 @@ a {
   align-items: center;
   text-align: center;
   font-size: 20px;
-  color: rgb(72, 70, 70);
+  color: #25283D;
   padding: 70px 50px;
   background-color: white;
   border-radius: 20px;
@@ -75,7 +75,7 @@ a {
 
 #planner-title {
   text-align: center;
-  color: rgb(11, 120, 150);
+  color: #A675A1;
   font-weight: lighter;
 }
 
@@ -93,7 +93,7 @@ a {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  background-color: #e9ace9;
+  background-color: #A675A1;
   color: rgb(255, 255, 255);
   padding: 10px;
   border-radius: 10px;
@@ -107,7 +107,7 @@ a {
   transform: rotate(180deg);
   white-space: nowrap;
   font-weight: bold;
-  background-color: #e9ace9;
+  background-color: #A675A1;
   color: rgb(255, 255, 255);
   padding: 10px;
   border-radius: 10px;
@@ -118,7 +118,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  border: 1px solid #e9ace9;
+  border: 1px solid #A675A1;
 }
 
 
@@ -146,11 +146,11 @@ select {
 }
 
 #new-form > label {
-  color: #0f6c63;
+  color: #25283D;
 }
 
 .submit {
-  background-color: rgb(11, 120, 150);
+  background-color: #CEA2AC;
   color: white;
   font-size: 16px;
   border-radius: 5px;
@@ -165,12 +165,12 @@ select {
 
 #add-title {
   margin: 20px;
-  color: #0f6c63;
+  color: #25283D;
 }
 
 #note {
   margin: 20px;
-  color: #0f6c63;
+  color: #25283D;
 }
 
 .my-plans {
