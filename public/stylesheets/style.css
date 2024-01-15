@@ -78,6 +78,8 @@ a {
   grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 8px;
   padding: 20px;
+  max-height: 500px;
+  overflow: auto;
 }
 
 .day-title {
@@ -109,13 +111,20 @@ a {
   border: 1px solid #ddd;
 }
 
-/* Style for dropdown (you can customize this) */
+
 select {
   padding: 5px;
   font-size: 14px;
 }
 
+.container {
+  padding: 20px;
+}
 
 .add-dish {
   font-size: 15px;
+}
+
+.my-plans {
+  font-size: 20px;
 }

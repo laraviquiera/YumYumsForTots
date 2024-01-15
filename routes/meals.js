@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const mealsCtrl = require('../controllers/meals');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 //GET /meals
-router.get('/', mealsCtrl.index);
+router.get('/', ensureLoggedIn, mealsCtrl.index);
 //GET /meals/view-all
 
 module.exports = router;

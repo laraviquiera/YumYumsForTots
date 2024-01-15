@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const plansCtrl = require('../controllers/plans');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 //GET /plans
-router.get('/', plansCtrl.index);
+router.get('/', ensureLoggedIn, plansCtrl.index);
 // GET /new
-router.get('/new', plansCtrl.new)
+router.get('/new', ensureLoggedIn, plansCtrl.new)
 
 //GET /plan/new (new plan)
 // router.get('/plans/new', plansCtrl.new);
