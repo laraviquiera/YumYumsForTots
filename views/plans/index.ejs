@@ -28,7 +28,7 @@
     <select>
       <!-- Populate with dish options -->
       <option>Banana-Spinach Pancake</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -38,7 +38,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -48,7 +48,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -58,7 +58,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <  <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -68,7 +68,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -78,7 +78,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -88,7 +88,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -103,7 +103,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -113,7 +113,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -123,7 +123,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -133,7 +133,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -143,7 +143,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -153,7 +153,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -163,7 +163,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -176,7 +176,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -186,7 +186,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -196,7 +196,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -206,7 +206,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -216,7 +216,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -226,7 +226,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -236,7 +236,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -251,7 +251,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -261,7 +261,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -271,7 +271,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -281,7 +281,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -291,7 +291,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -301,7 +301,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
@@ -311,7 +311,7 @@
   <div class="dish-options">
     <select>
       <option>Select One</option>
-      <% meals.forEach(meal => { %>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
         <option><%= meal.name %></option>
       <% }); %>
     </select>
