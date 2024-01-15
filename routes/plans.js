@@ -7,8 +7,8 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 router.get('/', ensureLoggedIn, plansCtrl.index);
 // GET /new
 router.get('/new', ensureLoggedIn, plansCtrl.new)
+//POST /new
+router.post('/new', ensureLoggedIn, plansCtrl.create);
 
-//GET /plan/new (new plan)
-// router.get('/plans/new', plansCtrl.new);
 
 module.exports = router;

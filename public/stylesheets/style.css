@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: rgb(11, 120, 150);
 }
 
 .main-logo {
@@ -72,6 +72,12 @@ a {
 
 
 /* MEAL PLANNER SECTION */
+
+#planner-title {
+  text-align: center;
+  color: rgb(11, 120, 150);
+  font-weight: lighter;
+}
 
 .meal-planner {
   display: grid;
@@ -143,16 +149,16 @@ select {
   color: #0f6c63;
 }
 
-#submit {
-  background-color: #0f6c63;
+.submit {
+  background-color: rgb(11, 120, 150);
   color: white;
   font-size: 16px;
   border-radius: 5px;
   border: none;
   transition: background-color 0.3s; 
-  font-size: 15px;
+  font-size: 13px;
   margin: 20px;
-  padding: 8px 20px;
+  padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
 }

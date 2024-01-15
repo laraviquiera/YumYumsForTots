@@ -1,19 +1,18 @@
 <%- include('../partials/header') %>
 
-<h1>Weekly Meal Planner</h1>
-
-<div>
-    <label for="plan-name">Plan Name:</label>
-    <input type="text" placeholder="e.g. Week of Jan 22">
-    <input type="submit" value="Save Plan Name">
-</div>
+<h1 id="planner-title">Weekly Meal Planner</h1>
 
 <section class="container">
-<div class="meal-planner">
-  <!-- Empty cell for spacing -->
-  <div></div>
+  <div>
+    <label for="plan-name">Plan Name:</label>
+    <input type="text" placeholder="e.g. Week of Jan 22">
+    <input class="submit" type="submit" value="Save Plan Name">
+</div>
 
-  <!-- Days of the week titles -->
+<div class="meal-planner">
+
+  <div></div>
+<!-- Days of the week titles -->
   <div class="day-title">Monday</div>
   <div class="day-title">Tuesday</div>
   <div class="day-title">Wednesday</div>
@@ -29,63 +28,69 @@
     <select>
       <!-- Populate with dish options -->
       <option>Banana-Spinach Pancake</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
-  
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
     <!-- TUE BREAKFAST -->
 
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- WED BREAKFAST -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- THU BREAKFAST -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <  <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- FRI BREAKFAST -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
      <!-- SAT BREAKFAST -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
   <!-- SUN BREAKFAST -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
   
@@ -97,65 +102,70 @@
   <!-- Dish options for Breakfast -->
   <div class="dish-options">
     <select>
-      <!-- Populate with dish options -->
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
-  
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
     <!-- TUE LUNCH -->
 
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- WED LUNCH -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- THU LUNCH -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- FRI LUNCH -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
      <!-- SAT LUNCH -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
   <!-- SUN LUNCH -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
   
@@ -163,68 +173,72 @@
   
   <!-- MON DINNER -->
   <div class="meal-type-title">Dinner</div>
-  <!-- Dish options for Breakfast -->
   <div class="dish-options">
     <select>
-      <!-- Populate with dish options -->
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
-  
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- TUE DINNER -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- WED DINNER -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- THU DINNER -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- FRI DINNER -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
      <!-- SAT DINNER -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
   <!-- SUN DINNER -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
@@ -236,65 +250,70 @@
   <!-- Dish options for Breakfast -->
   <div class="dish-options">
     <select>
-      <!-- Populate with dish options -->
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
-  
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- TUE SNACK -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- WED SNACK -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- THU SNACK -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
     <!-- FRI SNACK -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
      <!-- SAT SNACK -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
   <!-- SUN SNACK -->
   <div class="dish-options">
     <select>
-      <option>Dish 1</option>
-      <option>Dish 2</option>
-      <option>Dish 3</option>
+      <option>Select One</option>
+      <% meals.forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
     </select>
   </div>
 
