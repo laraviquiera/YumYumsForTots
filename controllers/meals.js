@@ -3,7 +3,7 @@ const Plan = require('../models/plan');
 
 
 module.exports = {
-  index
+  index,
 };
 
 async function index(req, res) {

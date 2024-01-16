@@ -1,5 +1,5 @@
-const Plan = require('../models/plan');
 const Meal = require('../models/meal');
+const Plan = require('../models/plan');
 
 module.exports = {
     index,
@@ -10,20 +10,21 @@ module.exports = {
 
 async function deleteDish(req, res) {
   try {
-    const dishIdToDelete = req.params.id;
-    const deletedDish = await Meal.findById(dishIdToDelete);
+    const meal = await Meal.findOne({ '_id': req.params.id, 'user': req.user._id });
 
-    if (!deletedDish) {
+    if (!meal) {
       return res.redirect('/plans');
     }
 
-    await deletedDish.remove();
-    return res.redirect('/plans');
-  } catch (error) {
-    console.error(error);
-    return res.redirect('/plans');
+    await meal.remove(req.params.id);
+
+    res.redirect('/plans');
+  } catch (err) {
+    console.log(err);
+    res.redirect('/plans');
   }
 }
+
 
 
 async function create(req, res) {

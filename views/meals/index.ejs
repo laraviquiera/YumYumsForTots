@@ -1,19 +1,17 @@
 <%- include('../partials/header') %>
 
 <main class="meal-list">
-  <div class="meal-container">
-    <div class="meal-info">
-      <h3>Banana Spinach Pancake</h3>
-      <p>Category: Breakfast | Snack</p>
-      <a href="https://www.yummytoddlerfood.com/banana-spinach-pancakes" target="_blank">View Recipe</a>
-    </div>
-    <div class="meal-image">
-      <img src="https://i.imgur.com/IKSvLr9.jpg" alt="Banana-spinach-pancake" width="200" height="200">
-    </div>
-    <div class="add-to-planner">
-      <button>Add to Planner</button>
-    </div>
-  </div>
+  <ul>
+    <% meals.forEach(meal => { %>
+      <li>
+        <h3><%= meal.name %></h3>
+        <p>Category: <%= meal.mealType.join(' | ') %></p>
+        <a href="<%= meal.referenceURL %>" target="_blank">View Recipe</a>
+        <!-- You can add a button here for "Add to Planner" if needed -->
+      </li>
+    <% }); %>
+  </ul>
 </main>
+
 
 <%- include('../partials/footer') %>

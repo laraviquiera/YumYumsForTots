@@ -20,4 +20,18 @@
 </form>
 </section>
 
+<h3>List of your added dishes</h3>
+<p>These are also populated in the drop-down option in your meal planner.</p>
+<ul>
+  <% meals.forEach(meal => { %>
+    <li>
+      <%= meal.name %>
+      <form action="/plans/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" >Delete</button>
+      </form>
+    </li>
+  <% }); %>
+</ul>
+
 <%- include('../partials/footer') %>
