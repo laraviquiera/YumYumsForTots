@@ -5,7 +5,6 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 //GET /meals
 router.get('/', ensureLoggedIn, mealsCtrl.index);
-//GET /meals/view-all
 
 
 module.exports = router;

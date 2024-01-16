@@ -1,5 +1,4 @@
 const Meal = require('../models/meal');
-const Plan = require('../models/plan');
 
 module.exports = {
     index,
@@ -44,15 +43,15 @@ async function create(req, res) {
   res.redirect('/plans');
 }
 
-
-async function index(req, res) {
-
-  const meals = await Meal.find({});
-    res.render('plans/index', { title: 'Meal Planner', meals });
- }
-
 async function newDish(req, res) {
   const meals = await Meal.find({});
 
   res.render('plans/new', { errorMsg: '', title: 'Add A New Dish', meals});
  }
+
+async function index(req, res) {
+  const meals = await Meal.find({});
+    res.render('plans/index', { title: 'Meal Planner', meals });
+ }
+
+

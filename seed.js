@@ -4,7 +4,6 @@ require('dotenv').config();
 require('./config/database');
 
 const Meal = require('./models/meal');
-const Plan = require('./models/plan');
 
 // For better organization, the seed data is being stored in a separate data.js module
 const data = require('./data');
@@ -14,21 +13,18 @@ const data = require('./data');
 (async function() {
     // Save the promises (or call right in the array if feeling frisky)
     const p1 = Meal.deleteMany({});
-    const p2 = Plan.deleteMany({});
     
     // Promise.all will return a single promise that resolves
     // only after all of the array's promises resolve
-    let results = await Promise.all([p1, p2]);
+    let results = await Promise.all([p1]);
     // results will be an array of result objects!
     console.log(results);
   
     // This time, provide the array of promises in-line
-    // results = await Promise.all([
-    //   Meals.create(data.meals),
-    //   Plans.create(data.plans)
-    // ]);
-    // console.log('Created dish:', results[0]);
-    // console.log('Created plans', results[1]);
+    results = await Promise.all([
+      Meal.create(data.meals),
+    ]);
+    console.log('Created dish:', results[0]);
   
 //     // Associate Mark Hamill with Star Wars - A New Hope
 //     results = await Promise.all([
