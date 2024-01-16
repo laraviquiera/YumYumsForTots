@@ -1,37 +1,330 @@
 <%- include('../partials/header') %>
 
-<h1 id="add-title">Add your own dish to your planner</h1>
-<p id="note">If you can't find your desired dish on the list. You can add your own and it'll be added to the drop-down menu option</p>
+<h1 id="planner-title">Weekly Meal Planner</h1>
 
-<section>
-<form id="new-form" action="/plans" method="POST">
-  <label>Dish Name:</label>
-  <input type="text" name="name">
-  <label>Dish URL Link (optional):</label>
-  <input type="text" name="referenceURL">
-  <label>Meal Type:</label>
-  <select name="mealType">
-    <option value="Breakfast">Breakfast</option>
-    <option value="Lunch">Lunch</option>
-    <option value="Dinner">Dinner</option>
-    <option value="Snack">Snack</option>
+<section class="container">
+  <div>
+    <label for="plan-name">Plan Name:</label>
+    <input type="text" placeholder="e.g. Week of Jan 22">
+    <input class="submit" type="submit" value="Save Plan Name">
+</div>
+
+<div class="meal-planner">
+
+  <div></div>
+<!-- Days of the week titles -->
+  <div class="day-title">Monday</div>
+  <div class="day-title">Tuesday</div>
+  <div class="day-title">Wednesday</div>
+  <div class="day-title">Thursday</div>
+  <div class="day-title">Friday</div>
+  <div class="day-title">Saturday</div>
+  <div class="day-title">Sunday</div>
+
+<!-- MON BREAKFAST -->
+<div class="meal-type-title">Breakfast</div>
+<!-- Dish options for Breakfast -->
+<div class="dish-options">
+  <select>
+    <option>Banana-Spinach Pancake</option>
+    <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(breakfastMeal => { %>
+      <option value="<%= breakfastMeal._id %>"><%= breakfastMeal.name %></option>
+    <% }); %>
   </select>
-  <input class="submit" type="submit" value="Add a Dish" >
-</form>
+</div>
+
+    <!-- TUE BREAKFAST -->
+
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- WED BREAKFAST -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- THU BREAKFAST -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- FRI BREAKFAST -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+     <!-- SAT BREAKFAST -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+  <!-- SUN BREAKFAST -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+  
+
+<!-- LUNCH -->
+  
+  <!-- MON LUNCH -->
+  <div class="meal-type-title">Lunch</div>
+  <!-- Dish options for Breakfast -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+    <!-- TUE LUNCH -->
+
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- WED LUNCH -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- THU LUNCH -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- FRI LUNCH -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+     <!-- SAT LUNCH -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+  <!-- SUN LUNCH -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+  
+  <!-- DINNER -->
+  
+  <!-- MON DINNER -->
+  <div class="meal-type-title">Dinner</div>
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- TUE DINNER -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- WED DINNER -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- THU DINNER -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- FRI DINNER -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+     <!-- SAT DINNER -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+  <!-- SUN DINNER -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+
+    <!-- SNACK-->
+  
+  <!-- MON SNACK -->
+  <div class="meal-type-title">Snack</div>
+  <!-- Dish options for Breakfast -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- TUE SNACK -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- WED SNACK -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- THU SNACK -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+    <!-- FRI SNACK -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+     <!-- SAT SNACK -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
+  <!-- SUN SNACK -->
+  <div class="dish-options">
+    <select>
+      <option>Select One</option>
+      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
+        <option><%= meal.name %></option>
+      <% }); %>
+    </select>
+  </div>
+
 </section>
 
-<h3>List of your added dishes</h3>
-<p>These are also populated in the drop-down option in your meal planner.</p>
-<ul>
-  <% meals.forEach(meal => { %>
-    <li>
-      <%= meal.name %>
-      <form action="/plans/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
-        <input type="hidden" name="_method" value="DELETE">
-        <button type="submit" >Delete</button>
-      </form>
-    </li>
-  <% }); %>
-</ul>
+<div class="add-dish">
+  <a href="/plans/new">+ Add a dish | Delete a dish</a>
+</div>
+
+<section>
+<h3 class="my-plans">MY PLANS</h3>
+</section>
 
 <%- include('../partials/footer') %>

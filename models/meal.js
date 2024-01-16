@@ -12,6 +12,7 @@ const mealSchema = new Schema({
       required: true
     },
     referenceURL: String,
+    imgURL: String,
     mealType: {
       type: String,
       enum: ['Breakfast', 'Lunch', 'Dinner', 'Snack']

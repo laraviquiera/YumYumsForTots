@@ -1,0 +1,37 @@
+<%- include('../partials/header') %>
+
+<h1 id="add-title">Add your own dish to your planner</h1>
+<p id="note">If you can't find your desired dish on the list. You can add your own and it'll be added to the drop-down menu option</p>
+
+<section>
+<form id="new-form" action="/plans" method="POST">
+  <label>Dish Name:</label>
+  <input type="text" name="name">
+  <label>Dish URL Link (optional):</label>
+  <input type="text" name="referenceURL">
+  <label>Meal Type:</label>
+  <select name="mealType">
+    <option value="Breakfast">Breakfast</option>
+    <option value="Lunch">Lunch</option>
+    <option value="Dinner">Dinner</option>
+    <option value="Snack">Snack</option>
+  </select>
+  <input class="submit" type="submit" value="Add a Dish" >
+</form>
+</section>
+
+<h3>List of your added dishes</h3>
+<p>These are also populated in the drop-down option in your meal planner.</p>
+<ul>
+  <% meals.forEach(meal => { %>
+    <li>
+      <%= meal.name %>
+      <form action="/plans/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" >Delete</button>
+      </form>
+    </li>
+  <% }); %>
+</ul>
+
+<%- include('../partials/footer') %>

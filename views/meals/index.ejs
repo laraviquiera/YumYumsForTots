@@ -14,9 +14,31 @@
       <button>Add to Planner</button>
     </div>
   </div>
-  <% meals.forEach(function(meal) { %>
-    <p><%= meal.name %></p>
-  <% }) %>
+  <section>
+    <h3>Breakfast</h3>
+    <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(function(meal) { %>
+      <p><%= meal.name %></p>
+      <img src="<%= meal.imgURL %>">
+    <% }) %>
+  </section>
+  <section>
+    <h3>Lunch</h3>
+    <% meals.filter(meal => meal.mealType === 'Lunch').forEach(function(meal) { %>
+      <p><%= meal.name %></p>
+    <% }) %>
+  </section>
+  <section>
+    <h3>Dinner</h3>
+    <% meals.filter(meal => meal.mealType === 'Dinner').forEach(function(meal) { %>
+      <p><%= meal.name %></p>
+    <% }) %>
+  </section>
+  <section>
+    <h3>Snack</h3>
+    <% meals.filter(meal => meal.mealType === 'Snack').forEach(function(meal) { %>
+      <p><%= meal.name %></p>
+    <% }) %>
+  </section>
 
 </main>
 

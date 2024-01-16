@@ -53,5 +53,3 @@ async function index(req, res) {
   const meals = await Meal.find({});
     res.render('plans/index', { title: 'Meal Planner', meals });
  }
-
-
