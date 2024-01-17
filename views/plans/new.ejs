@@ -26,7 +26,7 @@
 <!-- Dish options for Breakfast -->
 <div class="dish-options">
   <select>
-    <option>Banana-Spinach Pancake</option>
+    <option>Select One</option>
     <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(breakfastMeal => { %>
       <option value="<%= breakfastMeal._id %>"><%= breakfastMeal.name %></option>
     <% }); %>

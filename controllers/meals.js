@@ -4,29 +4,29 @@ const Meal = require('../models/meal');
 module.exports = {
   index,
   create,
-  new: newDish
-  // delete: deleteDish
+  new: newDish,
+  delete: deleteDish
 };
 
-// async function deleteDish(req, res) {
-//   try {
-//     const meal = await Meal.findOne({ '_id': req.params.id, 'user': req.user._id });
+async function deleteDish(req, res) {
+  try {
+    const meal = await Meal.findOne({ '_id': req.params.id, 'user': req.user._id });
 
-//     if (!meal) {
-//       return res.redirect('/meals');
-//     }
+    if (!meal) {
+      return res.redirect('/meals');
+    }
 
-//     await meal.remove(req.params.id);
+    await meal.remove(req.params.id);
 
-//     res.redirect('/meals');
-//   } catch (err) {
-//     console.log(err);
-//     res.redirect('/meals');
-//   }
-// }
+    res.redirect('/meals');
+  } catch (err) {
+    console.log(err);
+    res.redirect('/meals');
+  }
+}
 
 async function newDish(req, res) {
-  const meals = await Meal.find({});
+  const meals = await Meal.find({ user: { $ne: req.user._id } });
 
   res.render('meals/new', { errorMsg: '', title: 'Add A New Dish', meals});
  }
@@ -50,9 +50,21 @@ async function create(req, res) {
 
 
 async function index(req, res) {
-  const meals = await Meal.find({$or: [{user: null}, {user: req.user._id}]});
+  const meals = await Meal.find({ $or: [{ user: null }, { user: req.user._id }] });
   
   res.render('meals/index', { title: 'All Dishes', meals });
 }
+
+// async function index(req, res) {
+//   try {
+//     // Fetch all meals except those created by the current user
+//     const meals = await Meal.find({ user: { $ne: req.user._id } });
+
+//     res.render('meals/index', { meals });
+//   } catch (err) {
+//     console.error(err);
+//     res.redirect('/'); // or render the page with an error message
+//   }
+// }
 
 
