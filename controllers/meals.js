@@ -8,20 +8,36 @@ module.exports = {
   delete: deleteMeal
 };
 
+
+
 async function deleteMeal(req, res) {
-  try {
-    const meal = await Meal.findOneAndDelete({ '_id': req.params.id, 'user': req.user._id });
-
-    if (!meal) {
-      return res.redirect('/meals');
-    }
-
-    res.redirect('/meals');
-  } catch (err) {
-    console.log(err);
-    res.redirect('/meals');
-  }
+  // Note the cool "dot" syntax to query on the property of a subdoc
+  const meal = await Meal.findOne({ 'meals._id': req.params.id, 'meals.user': req.user._id });
+  // Rogue user!
+  if (!meal) return res.redirect('/meals/new');
+  // Remove the review using the remove method available on Mongoose arrays
+  meal.meals.remove(req.params.id);
+  // Save the updated movie doc
+  await meal.save();
+  // Redirect back to the movie's show view
+  res.redirect(`/meals/${meal._id}`);
 }
+
+
+// async function deleteMeal(req, res) {
+//   try {
+//     const meal = await Meal.findOneAndDelete({ 'meal._id': req.params.id, 'meal.user': req.user._id });
+
+//     if (!meal) {
+//       return res.redirect('/meals');
+//     }
+
+//     res.redirect('/meals');
+//   } catch (err) {
+//     console.log(err);
+//     res.redirect('/meals');
+//   }
+// }
 
 async function newMeal(req, res) {
   const meals = await Meal.find({ user: { $ne: req.user._id } });
@@ -53,17 +69,5 @@ async function index(req, res) {
   
   res.render('meals/index', { title: 'All Dishes', meals });
 }
-
-// async function index(req, res) {
-//   try {
-//     // Fetch all meals except those created by the current user
-//     const meals = await Meal.find({ user: { $ne: req.user._id } });
-
-//     res.render('meals/index', { meals });
-//   } catch (err) {
-//     console.error(err);
-//     res.redirect('/'); // or render the page with an error message
-//   }
-// }
 
 

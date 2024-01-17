@@ -8,11 +8,11 @@ module.exports = {
     show
 };
 
+
 async function show(req, res) {
   const plan = await Plan.findById(req.params.id);
   res.render('plans/show', { title: '', plan });
 }
-
 
 async function index(req, res) {
   const userPlans = await Plan.find({ user: req.user._id });
