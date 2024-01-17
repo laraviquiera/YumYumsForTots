@@ -2,6 +2,142 @@
 
 <main>
 
+  <!-- breakfast accordion -->
+<section class="categories-container">
+  <div class="accordion" id="categories">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading-1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#breakfast" aria-expanded="true" aria-controls="breakfast">
+        BREAKFAST
+        </button>
+      </h2>
+      <div id="breakfast" class="accordion-collapse collapse"
+      aria-labelledby="heading-1" data-bs-parent="#categories">
+        <div class="accordion-body">
+          <section>
+            <div class="category">
+            <h3>Breakfast</h3>
+          </div>
+            <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(function(meal) { %>
+            <div class="dish-container">
+              <div class="dish-name">
+              <p><%= meal.name %></p>
+            </div>
+              <div class="dish-img">
+                <img src="<%= meal.imgURL %>">
+              </div>
+              <div class="ref-url">
+              <a href="<%= meal.referenceURL %>">View Recipe</a>
+            </div>
+          </div>
+            <% }) %>
+          </section>
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- lunch accordion -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading-2">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#lunch" aria-expanded="true" aria-controls="lunch">
+        LUNCH
+        </button>
+      </h2>
+      <div id="lunch" class="accordion-collapse collapse"
+      aria-labelledby="heading-2" data-bs-parent="#categories">
+        <div class="accordion-body">
+          <section>
+            <div class="category">
+            <h3>Lunch</h3>
+          </div>
+            <% meals.filter(meal => meal.mealType === 'Lunch').forEach(function(meal) { %>
+              <div class="dish-container">
+                <div class="dish-name">
+              <p><%= meal.name %></p>
+              </div>
+              <div class="dish-img">
+                <img src="<%= meal.imgURL %>">
+              </div>
+              <div class="ref-url">
+              <a href="<%= meal.referenceURL %>">View Recipe</a>
+              </div>
+              </div>
+            <% }) %>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- dinner accordion -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading-3">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#dinner" aria-expanded="true" aria-controls="dinner">
+        DINNER
+        </button>
+      </h2>
+      <div id="dinner" class="accordion-collapse collapse"
+      aria-labelledby="heading-3" data-bs-parent="#categories">
+        <div class="accordion-body">
+          <section>
+            <div class="category">
+            <h3>Dinner</h3>
+          </div>
+            <% meals.filter(meal => meal.mealType === 'Dinner').forEach(function(meal) { %>
+              <div class="dish-container">
+                <div class="dish-name">
+              <p><%= meal.name %></p>
+                </div>
+              <div class="dish-img">
+                <img src="<%= meal.imgURL %>">
+              </div>
+              <div class="ref-url">
+              <a href="<%= meal.referenceURL %>">View Recipe</a>
+                </div>
+             </div>
+            <% }) %>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- snack accordion -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading-4">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#snack" aria-expanded="true" aria-controls="snack">
+        SNACK
+        </button>
+      </h2>
+      <div id="snack" class="accordion-collapse collapse"
+      aria-labelLedby="heading-4" data-bs-parent="#categories">
+        <div class="accordion-body">
+          <section>
+            <div class="category">
+            <h3>Snack</h3>
+          </div>
+            <% meals.filter(meal => meal.mealType === 'Snack').forEach(function(meal) { %>
+              <div class="dish-container">
+                <div class="dish-name">
+              <p><%= meal.name %></p>
+              </div>
+              <div class="dish-img">
+                <img src="<%= meal.imgURL %>">
+              </div>
+              <div class="ref-url">
+              <a href="<%= meal.referenceURL %>">View Recipe</a>
+              </div>
+            </div>
+            <% }) %>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 
   <section>
     <div class="category">
     <h3>Breakfast</h3>
@@ -81,6 +217,6 @@
     <% }) %>
   </section>
 
-</main>
+</main> -->
 
 <%- include('../partials/footer') %>

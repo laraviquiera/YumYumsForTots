@@ -5,25 +5,25 @@ module.exports = {
   index,
   create,
   new: newDish
-  delete: deleteDish
+  // delete: deleteDish
 };
 
-async function deleteDish(req, res) {
-  try {
-    const meal = await Meal.findOne({ '_id': req.params.id, 'user': req.user._id });
+// async function deleteDish(req, res) {
+//   try {
+//     const meal = await Meal.findOne({ '_id': req.params.id, 'user': req.user._id });
 
-    if (!meal) {
-      return res.redirect('/meals');
-    }
+//     if (!meal) {
+//       return res.redirect('/meals');
+//     }
 
-    await meal.remove(req.params.id);
+//     await meal.remove(req.params.id);
 
-    res.redirect('/meals');
-  } catch (err) {
-    console.log(err);
-    res.redirect('/meals');
-  }
-}
+//     res.redirect('/meals');
+//   } catch (err) {
+//     console.log(err);
+//     res.redirect('/meals');
+//   }
+// }
 
 async function newDish(req, res) {
   const meals = await Meal.find({});

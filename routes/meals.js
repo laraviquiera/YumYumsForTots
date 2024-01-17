@@ -7,6 +7,6 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 router.post('/', ensureLoggedIn, mealsCtrl.create);
 router.get('/', ensureLoggedIn, mealsCtrl.index);
 router.get('/new', ensureLoggedIn, mealsCtrl.new)
-router.delete('/meals/:id', ensureLoggedIn, mealsCtrl.delete);
+// router.delete('/meals/:id', ensureLoggedIn, mealsCtrl.delete);
 
 module.exports = router;
