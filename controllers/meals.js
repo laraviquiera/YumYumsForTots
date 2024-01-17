@@ -4,7 +4,7 @@ const Meal = require('../models/meal');
 module.exports = {
   index,
   create,
-  new: newDish,
+  new: newMeal,
   delete: deleteDish
 };
 
@@ -25,7 +25,7 @@ async function deleteDish(req, res) {
   }
 }
 
-async function newDish(req, res) {
+async function newMeal(req, res) {
   const meals = await Meal.find({ user: { $ne: req.user._id } });
 
   res.render('meals/new', { errorMsg: '', title: 'Add A New Dish', meals});

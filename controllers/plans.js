@@ -35,7 +35,15 @@ async function create(req, res) {
 }
 
 
-async function newPlan(req, res) {
-  const meals = await Meal.find({});
-    res.render('plans/new', { title: 'Meal Planner', meals });
- }
+ async function newPlan(req, res) {
+  // Use the same query as in the meals index action to prevent users from seeing other user's custom meals
+  const meals = await Meal.find({ $or: [{ user: null }, { user: req.user._id }] }).sort('name');
+  // options object will have a property for each mealType
+  const options = {};
+  for (let mealType of ['Breakfast', 'Lunch', 'Dinner', 'Snack']) {
+    options[mealType] = meals.filter(meal => meal.mealType === mealType)
+      // Going to send the meal's name & referenceURL combined because the planSchema needs both
+      .map(meal => `<option value="${meal.name}|${meal.referenceURL}">${meal.name$}</option>`).join('');
+  }
+  res.render('plans/new', { title: 'Meal Planner', options });
+}

@@ -25,72 +25,58 @@
 <div class="meal-type-title">Breakfast</div>
 <!-- Dish options for Breakfast -->
 <div class="dish-options">
-  <select>
+  <select name="monBrk">
     <option>Select One</option>
-    <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(breakfastMeal => { %>
-      <option value="<%= breakfastMeal._id %>"><%= breakfastMeal.name %></option>
-    <% }); %>
+    <%= options.Breakfast %>
   </select>
 </div>
 
     <!-- TUE BREAKFAST -->
 
   <div class="dish-options">
-    <select>
+    <select name="tueBrk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Breakfast %>
     </select>
   </div>
 
     <!-- WED BREAKFAST -->
   <div class="dish-options">
-    <select>
+    <select name="wedBrk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Breakfast %>
     </select>
   </div>
 
     <!-- THU BREAKFAST -->
   <div class="dish-options">
-    <select>
+    <select name="thuBrk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Breakfast %>
     </select>
   </div>
 
     <!-- FRI BREAKFAST -->
   <div class="dish-options">
-    <select>
+    <select name="friBrk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Breakfast %>
     </select>
   </div>
 
      <!-- SAT BREAKFAST -->
   <div class="dish-options">
-    <select>
+    <select name="satBrk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Breakfast %>
     </select>
   </div>
 
   <!-- SUN BREAKFAST -->
   <div class="dish-options">
-    <select>
+    <select name="sunBrk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Breakfast').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Breakfast %>
     </select>
   </div>
   
@@ -101,71 +87,58 @@
   <div class="meal-type-title">Lunch</div>
   <!-- Dish options for Breakfast -->
   <div class="dish-options">
-    <select>
+    <select name="monLun">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Lunch %>
     </select>
   </div>
+
     <!-- TUE LUNCH -->
 
   <div class="dish-options">
-    <select>
+    <select name="tueLun">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Lunch %>
     </select>
   </div>
 
     <!-- WED LUNCH -->
   <div class="dish-options">
-    <select>
+    <select name="wedLun">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Lunch %>
     </select>
   </div>
 
     <!-- THU LUNCH -->
   <div class="dish-options">
-    <select>
+    <select name="thuLun">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Lunch %>
     </select>
   </div>
 
     <!-- FRI LUNCH -->
   <div class="dish-options">
-    <select>
+    <select name="friLun">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Lunch %>
     </select>
   </div>
 
      <!-- SAT LUNCH -->
   <div class="dish-options">
-    <select>
+    <select name="satLun">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Lunch %>
     </select>
   </div>
 
   <!-- SUN LUNCH -->
   <div class="dish-options">
-    <select>
+    <select name="sunLun">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Lunch').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Lunch %>
     </select>
   </div>
   
@@ -174,71 +147,57 @@
   <!-- MON DINNER -->
   <div class="meal-type-title">Dinner</div>
   <div class="dish-options">
-    <select>
+    <select name="monDin">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Dinner %>
     </select>
   </div>
 
     <!-- TUE DINNER -->
   <div class="dish-options">
-    <select>
+    <select name="tueDin">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Dinner %>
     </select>
   </div>
 
     <!-- WED DINNER -->
   <div class="dish-options">
-    <select>
+    <select name="wedDin">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Dinner %>
     </select>
   </div>
 
     <!-- THU DINNER -->
   <div class="dish-options">
-    <select>
+    <select name="thuDin">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Dinner %>
     </select>
   </div>
 
     <!-- FRI DINNER -->
   <div class="dish-options">
-    <select>
+    <select name="friDin">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Dinner %>
     </select>
   </div>
 
      <!-- SAT DINNER -->
   <div class="dish-options">
-    <select>
+    <select name="satDin">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Dinner %>
     </select>
   </div>
 
   <!-- SUN DINNER -->
   <div class="dish-options">
-    <select>
+    <select name="sunDin">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Dinner').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Dinner %>
     </select>
   </div>
 
@@ -249,71 +208,57 @@
   <div class="meal-type-title">Snack</div>
   <!-- Dish options for Breakfast -->
   <div class="dish-options">
-    <select>
+    <select name="monSnk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Snack %>
     </select>
   </div>
 
     <!-- TUE SNACK -->
   <div class="dish-options">
-    <select>
+    <select name="tueSnk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Snack %>
     </select>
   </div>
 
     <!-- WED SNACK -->
   <div class="dish-options">
-    <select>
+    <select name="wedSnk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Snack %>
     </select>
   </div>
 
     <!-- THU SNACK -->
   <div class="dish-options">
-    <select>
+    <select name="thuSnk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Snack %>
     </select>
   </div>
 
     <!-- FRI SNACK -->
   <div class="dish-options">
-    <select>
+    <select name="friSnk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Snack %>
     </select>
   </div>
 
      <!-- SAT SNACK -->
   <div class="dish-options">
-    <select>
+    <select name="satSnk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Snack %>
     </select>
   </div>
 
   <!-- SUN SNACK -->
   <div class="dish-options">
-    <select>
+    <select name="sunSnk">
       <option>Select One</option>
-      <% meals.filter(meal => meal.mealType === 'Snack').forEach(meal => { %>
-        <option><%= meal.name %></option>
-      <% }); %>
+      <%= options.Snack %>
     </select>
   </div>
 
