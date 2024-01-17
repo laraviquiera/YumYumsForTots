@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+
+ <h3 class="my-plans">MY PLANS</h3>
+
+<ul>
+  <% userPlans.forEach(plan => { %>
+    <li><%= plan.title %> - <%= plan.createdAt %></li> 
+  <% }); %>
+</ul>
+
+<%- include('../partials/footer') %>

@@ -1,9 +1,17 @@
 const Meal = require('../models/meal');
+const Plan = require('../models/plan');
 
 module.exports = {
     new: newPlan,
-    create
+    create,
+    index
 };
+
+
+async function index(req, res) {
+  const userPlans = await Plan.find({ user: req.user._id });
+  res.render('plans/index', { title: '', userPlans });
+}
 
 async function create(req, res) {
   const { title, monBrk, monLun, monDin, monSnk, tueBrk, tueLun, tueDin, tueSnk, 
