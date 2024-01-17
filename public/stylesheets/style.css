@@ -180,8 +180,7 @@ select {
 
 /* view all dishes */
 /* main {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
 } */
 
 .category {
