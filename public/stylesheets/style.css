@@ -177,3 +177,41 @@ select {
   font-size: 20px;
 }
 
+
+/* view all dishes */
+/* main {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.category {
+  margin-bottom: 10px;
+  padding: 10px 50px;
+  text-align: center;
+}
+
+.dish-container {
+  border: 1px solid #ccc;
+  background-color: white;
+  margin: 10px 40px;
+  padding: 10px 50px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.dish-name {
+  font-weight: bold;
+}
+
+.dish-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.ref-url {
+  margin-top: 10px;
+}
+
+
+/* Additional styling can be added based on your design preferences */

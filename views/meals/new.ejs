@@ -4,7 +4,7 @@
 <p id="note">If you can't find your desired dish on the list. You can add your own and it'll be added to the drop-down menu option</p>
 
 <section>
-<form id="new-form" action="/plans" method="POST">
+<form id="new-form" action="/meals/new" method="POST">
   <label>Dish Name:</label>
   <input type="text" name="name">
   <label>Dish URL Link (optional):</label>
@@ -26,7 +26,7 @@
   <% meals.forEach(meal => { %>
     <li>
       <%= meal.name %>
-      <form action="/plans/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
+      <form action="/meals/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
         <input type="hidden" name="_method" value="DELETE">
         <button type="submit" >Delete</button>
       </form>
