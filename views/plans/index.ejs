@@ -1,12 +1,15 @@
 <%- include('../partials/header') %>
 
-
- <h3 class="my-plans">MY PLANS</h3>
+<h3 class="my-plans">MY MEAL PLANS</h3>
 
 <ul>
-  <% userPlans.forEach(plan => { %>
-    <li><%= plan.title %> - <%= plan.createdAt %></li> 
-  <% }); %>
+    <% userPlans.forEach(plan => { %>
+      <li>
+        <a href="/plans/<%= plan._id %>">
+          <%= plan.title %>
+        </a>
+      </li> 
+    <% }); %>
 </ul>
 
 <%- include('../partials/footer') %>

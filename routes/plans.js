@@ -4,10 +4,12 @@ const plansCtrl = require('../controllers/plans');
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 
-// GET /new/plans
+// GET /plans/new
 router.get('/new', ensureLoggedIn, plansCtrl.new)
-router.post('/new', ensureLoggedIn, plansCtrl.create);
+router.post('/', ensureLoggedIn, plansCtrl.create);
 router.get('/', ensureLoggedIn, plansCtrl.index);
+// GET /plans/:id (show)
+router.get('/:id', ensureLoggedIn, plansCtrl.show);
 
 
 

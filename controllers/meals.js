@@ -5,18 +5,16 @@ module.exports = {
   index,
   create,
   new: newMeal,
-  delete: deleteDish
+  delete: deleteMeal
 };
 
-async function deleteDish(req, res) {
+async function deleteMeal(req, res) {
   try {
-    const meal = await Meal.findOne({ '_id': req.params.id, 'user': req.user._id });
+    const meal = await Meal.findOneAndDelete({ '_id': req.params.id, 'user': req.user._id });
 
     if (!meal) {
       return res.redirect('/meals');
     }
-
-    await meal.remove(req.params.id);
 
     res.redirect('/meals');
   } catch (err) {
@@ -31,16 +29,17 @@ async function newMeal(req, res) {
   res.render('meals/new', { errorMsg: '', title: 'Add A New Dish', meals});
  }
 
+
 async function create(req, res) {
-  const { name, referenceURL, mealType } = req.body;
+  const { name, mealType } = req.body;
   
   if (!name) {
     return res.render('plans/new', { errorMsg: 'Dish name is required', title: 'Add A New Dish' });
   }
 
   const newMeal = new Meal({
+    user: req.user._id,
     name,
-    referenceURL,
     mealType
   });
 

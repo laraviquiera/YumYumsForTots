@@ -3,11 +3,10 @@
 <h1 id="planner-title">Weekly Meal Planner</h1>
 
 <section class="container">
-  <form action="/plans/new" method="POST"> 
+  <form action="/plans" method="POST"> 
     <label for="plan-name">Plan Name:</label>
     <input type="text" name="title" placeholder="e.g. Week of Jan 22" required>
     <input class="submit" type="submit" value="Save Plan">
-  </form>
 
 <div class="meal-planner">
 
@@ -27,7 +26,7 @@
 <div class="dish-options">
   <select name="monBrk">
     <option>Select One</option>
-    <%= options.Breakfast %>
+    <%- options.Breakfast %>
   </select>
 </div>
 
@@ -36,7 +35,7 @@
   <div class="dish-options">
     <select name="tueBrk">
       <option>Select One</option>
-      <%= options.Breakfast %>
+      <%- options.Breakfast %>
     </select>
   </div>
 
@@ -44,7 +43,7 @@
   <div class="dish-options">
     <select name="wedBrk">
       <option>Select One</option>
-      <%= options.Breakfast %>
+      <%- options.Breakfast %>
     </select>
   </div>
 
@@ -52,7 +51,7 @@
   <div class="dish-options">
     <select name="thuBrk">
       <option>Select One</option>
-      <%= options.Breakfast %>
+      <%- options.Breakfast %>
     </select>
   </div>
 
@@ -60,7 +59,7 @@
   <div class="dish-options">
     <select name="friBrk">
       <option>Select One</option>
-      <%= options.Breakfast %>
+      <%- options.Breakfast %>
     </select>
   </div>
 
@@ -68,7 +67,7 @@
   <div class="dish-options">
     <select name="satBrk">
       <option>Select One</option>
-      <%= options.Breakfast %>
+      <%- options.Breakfast %>
     </select>
   </div>
 
@@ -76,7 +75,7 @@
   <div class="dish-options">
     <select name="sunBrk">
       <option>Select One</option>
-      <%= options.Breakfast %>
+      <%- options.Breakfast %>
     </select>
   </div>
   
@@ -89,7 +88,7 @@
   <div class="dish-options">
     <select name="monLun">
       <option>Select One</option>
-      <%= options.Lunch %>
+      <%- options.Lunch %>
     </select>
   </div>
 
@@ -98,7 +97,7 @@
   <div class="dish-options">
     <select name="tueLun">
       <option>Select One</option>
-      <%= options.Lunch %>
+      <%- options.Lunch %>
     </select>
   </div>
 
@@ -106,7 +105,7 @@
   <div class="dish-options">
     <select name="wedLun">
       <option>Select One</option>
-      <%= options.Lunch %>
+      <%- options.Lunch %>
     </select>
   </div>
 
@@ -114,7 +113,7 @@
   <div class="dish-options">
     <select name="thuLun">
       <option>Select One</option>
-      <%= options.Lunch %>
+      <%- options.Lunch %>
     </select>
   </div>
 
@@ -122,7 +121,7 @@
   <div class="dish-options">
     <select name="friLun">
       <option>Select One</option>
-      <%= options.Lunch %>
+      <%- options.Lunch %>
     </select>
   </div>
 
@@ -130,7 +129,7 @@
   <div class="dish-options">
     <select name="satLun">
       <option>Select One</option>
-      <%= options.Lunch %>
+      <%- options.Lunch %>
     </select>
   </div>
 
@@ -138,7 +137,7 @@
   <div class="dish-options">
     <select name="sunLun">
       <option>Select One</option>
-      <%= options.Lunch %>
+      <%- options.Lunch %>
     </select>
   </div>
   
@@ -149,7 +148,7 @@
   <div class="dish-options">
     <select name="monDin">
       <option>Select One</option>
-      <%= options.Dinner %>
+      <%- options.Dinner %>
     </select>
   </div>
 
@@ -157,7 +156,7 @@
   <div class="dish-options">
     <select name="tueDin">
       <option>Select One</option>
-      <%= options.Dinner %>
+      <%- options.Dinner %>
     </select>
   </div>
 
@@ -165,7 +164,7 @@
   <div class="dish-options">
     <select name="wedDin">
       <option>Select One</option>
-      <%= options.Dinner %>
+      <%- options.Dinner %>
     </select>
   </div>
 
@@ -173,7 +172,7 @@
   <div class="dish-options">
     <select name="thuDin">
       <option>Select One</option>
-      <%= options.Dinner %>
+      <%- options.Dinner %>
     </select>
   </div>
 
@@ -181,7 +180,7 @@
   <div class="dish-options">
     <select name="friDin">
       <option>Select One</option>
-      <%= options.Dinner %>
+      <%- options.Dinner %>
     </select>
   </div>
 
@@ -189,7 +188,7 @@
   <div class="dish-options">
     <select name="satDin">
       <option>Select One</option>
-      <%= options.Dinner %>
+      <%- options.Dinner %>
     </select>
   </div>
 
@@ -197,7 +196,7 @@
   <div class="dish-options">
     <select name="sunDin">
       <option>Select One</option>
-      <%= options.Dinner %>
+      <%- options.Dinner %>
     </select>
   </div>
 
@@ -210,7 +209,7 @@
   <div class="dish-options">
     <select name="monSnk">
       <option>Select One</option>
-      <%= options.Snack %>
+      <%- options.Snack %>
     </select>
   </div>
 
@@ -218,7 +217,7 @@
   <div class="dish-options">
     <select name="tueSnk">
       <option>Select One</option>
-      <%= options.Snack %>
+      <%- options.Snack %>
     </select>
   </div>
 
@@ -226,7 +225,7 @@
   <div class="dish-options">
     <select name="wedSnk">
       <option>Select One</option>
-      <%= options.Snack %>
+      <%- options.Snack %>
     </select>
   </div>
 
@@ -234,7 +233,7 @@
   <div class="dish-options">
     <select name="thuSnk">
       <option>Select One</option>
-      <%= options.Snack %>
+      <%- options.Snack %>
     </select>
   </div>
 
@@ -242,7 +241,7 @@
   <div class="dish-options">
     <select name="friSnk">
       <option>Select One</option>
-      <%= options.Snack %>
+      <%- options.Snack %>
     </select>
   </div>
 
@@ -250,7 +249,7 @@
   <div class="dish-options">
     <select name="satSnk">
       <option>Select One</option>
-      <%= options.Snack %>
+      <%- options.Snack %>
     </select>
   </div>
 
@@ -258,14 +257,16 @@
   <div class="dish-options">
     <select name="sunSnk">
       <option>Select One</option>
-      <%= options.Snack %>
+      <%- options.Snack %>
     </select>
   </div>
-
+</form>
 </section>
+
 
 <div class="add-dish">
   <a href="/meals/new">+ Add a dish | Delete a dish</a>
 </div>
+
 
 <%- include('../partials/footer') %>
