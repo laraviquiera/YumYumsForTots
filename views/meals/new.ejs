@@ -1,9 +1,9 @@
 <%- include('../partials/header') %>
 
+<section class="new-dish-container">
 <h1 id="add-title">Add your own dish to your planner</h1>
 <p id="note">If you can't find your desired dish on the list. You can add your own and it'll be added to the drop-down menu option</p>
 
-<section>
 <form id="new-form" action="/meals/new" method="POST">
   <label>Dish Name:</label>
   <input type="text" name="name">
@@ -20,6 +20,7 @@
 </form>
 </section>
 
+<section class="added-dishes">
 <h3>List of your added dishes</h3>
 <p>These are also populated in the drop-down option in your meal planner.</p>
 <ul>
@@ -28,10 +29,11 @@
       <%= meal.name %>
       <form action="/meals/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
         <input type="hidden" name="_method" value="DELETE">
-        <button type="submit" >Delete</button>
+        <button type="submit">X</button>
       </form>
     </li>
   <% }); %>
 </ul>
+</section>
 
 <%- include('../partials/footer') %>

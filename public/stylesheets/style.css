@@ -7,7 +7,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: url('https://i.imgur.com/QZgaXt6.png');
+  background: url('https://i.imgur.com/LHl5iBU.png');
   background-size: cover;
 }
 
@@ -64,7 +64,7 @@ a {
   text-align: center;
   font-size: 20px;
   color: #25283D;
-  padding: 70px 50px;
+  padding: 30px 50px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
@@ -133,24 +133,33 @@ select {
 
 /* Add a dish section */
 
+.new-dish-container {
+  display: block;
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.2);
+  padding: 10px 30px;
+}
+
 .add-dish {
+  color: #085863;
   font-size: 15px;
+  text-align: center;
 }
 
 #new-form {
   font-size: 20px;
-  margin: 20px;
+  margin: 10px;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: repeat(2, minmax(auto, 15rem));
 }
 
 #new-form > label {
-  color: #25283D;
+  color: #A675A1;
 }
 
 .submit {
-  background-color: #CEA2AC;
+  background-color: #A675A1;
   color: white;
   font-size: 16px;
   border-radius: 5px;
@@ -164,25 +173,26 @@ select {
 }
 
 #add-title {
-  margin: 20px;
-  color: #25283D;
+  margin: 10px;
+  color: #A675A1;
 }
 
 #note {
-  margin: 20px;
-  color: #25283D;
+  margin: 10px;
+  color: #A675A1;
+  padding-bottom: 20px;
 }
 
 .my-plans {
   font-size: 20px;
 }
 
+.added-dishes {
+  color: #A675A1;
+}
+
 
 /* view all dishes */
-/* main {
-  display: grid;
-} */
-
 .category {
   margin-bottom: 10px;
   padding: 10px 50px;
@@ -200,9 +210,12 @@ select {
 
 .dish-name {
   font-weight: bold;
+  font-size: 15px;
+  text-align: center;
 }
 
 .dish-img img {
+  display: flex;
   max-width: 100%;
   height: auto;
   border-radius: 20px;
@@ -210,7 +223,5 @@ select {
 
 .ref-url {
   margin-top: 10px;
+  text-align: center;
 }
-
-
-/* Additional styling can be added based on your design preferences */
