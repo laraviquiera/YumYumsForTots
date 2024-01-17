@@ -3,11 +3,11 @@
 <h1 id="planner-title">Weekly Meal Planner</h1>
 
 <section class="container">
-  <div>
+  <form action="/plans/new" method="POST"> 
     <label for="plan-name">Plan Name:</label>
-    <input type="text" placeholder="e.g. Week of Jan 22">
-    <input class="submit" type="submit" value="Save Plan Name">
-</div>
+    <input type="text" name="title" placeholder="e.g. Week of Jan 22" required>
+    <input class="submit" type="submit" value="Save Plan">
+  </form>
 
 <div class="meal-planner">
 
@@ -323,7 +323,7 @@
   <a href="/meals/new">+ Add a dish | Delete a dish</a>
 </div>
 
-<section>
+<section id="my-plans">
 <h3 class="my-plans">MY PLANS</h3>
 </section>
 

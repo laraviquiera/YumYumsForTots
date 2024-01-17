@@ -6,6 +6,8 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // GET /new/plans
 router.get('/new', ensureLoggedIn, plansCtrl.new)
+router.post('/new', ensureLoggedIn, plansCtrl.create);
+
 
 
 
