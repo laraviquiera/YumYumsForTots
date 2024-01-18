@@ -11,37 +11,16 @@ module.exports = {
 
 
 async function deleteMeal(req, res) {
-  // Note the cool "dot" syntax to query on the property of a subdoc
-  const meal = await Meal.findOne({ 'meals._id': req.params.id, 'meals.user': req.user._id });
-  // Rogue user!
-  if (!meal) return res.redirect('/meals/new');
-  // Remove the review using the remove method available on Mongoose arrays
-  meal.meals.remove(req.params.id);
-  // Save the updated movie doc
-  await meal.save();
-  // Redirect back to the movie's show view
-  res.redirect(`/meals/${meal._id}`);
+  await Meal.findOneAndDelete(
+    // Query object that ensures the meal was created by the logged in user
+    {_id: req.params.id, user: req.user._id}
+  );
+  res.redirect('/meals/new');
 }
 
 
-// async function deleteMeal(req, res) {
-//   try {
-//     const meal = await Meal.findOneAndDelete({ 'meal._id': req.params.id, 'meal.user': req.user._id });
-
-//     if (!meal) {
-//       return res.redirect('/meals');
-//     }
-
-//     res.redirect('/meals');
-//   } catch (err) {
-//     console.log(err);
-//     res.redirect('/meals');
-//   }
-// }
-
 async function newMeal(req, res) {
-  const meals = await Meal.find({ user: { $ne: req.user._id } });
-
+  const meals = await Meal.find({ user: req.user._id }).sort('name');
   res.render('meals/new', { errorMsg: '', title: 'Add A New Dish', meals});
  }
 

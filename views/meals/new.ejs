@@ -5,11 +5,9 @@
 
 <p id="note">If you can't find your desired dish on the list. You can add your own and it'll be added to the drop-down menu option</p>
 
-<form id="new-form" action="/meals/new" method="POST">
+<form id="new-form" action="/meals" method="POST">
   <label>Dish Name:</label>
   <input type="text" name="name">
-  <label>Dish URL Link (optional):</label>
-  <input type="text" name="referenceURL">
   <label>Meal Type:</label>
   <select name="mealType">
     <option value="Breakfast">Breakfast</option>
@@ -26,15 +24,14 @@
 <p>These are also populated in the drop-down option in your meal planner.</p>
 <ul>
   <% meals.forEach(meal => { %>
-   <% if (meal.user && meal.user.equals(user._id)) { %>
     <li>
       <%= meal.name %>
-      <form action="/meals/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
-      <input type="hidden" name="_method" value="DELETE">
-      <button type="submit">X</button>
-      </form>
+      <% if (meal.user && meal.user.equals(user._id)) { %>
+        <form action="/meals/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
+          <button type="submit">X</button>
+        </form>
+      <% } %>
     </li>
-    <% } %>
   <% }); %>
 </ul>
 </section>
