@@ -6,15 +6,30 @@ module.exports = {
   create,
   new: newMeal,
   delete: deleteMeal,
-  edit
+  edit,
+  update
 };
+
+async function update(req, res) {
+  try {
+    const updatedMeal = await Meal.findOneAndUpdate(
+      {_id: req.params.id, user: req.user._id},
+      // update object with updated properties
+      req.body,
+      // options object {new: true} returns updated doc
+      {new: true}
+    );
+  } catch (e) {
+    console.log(e.message);
+  }
+  return res.redirect('/plans/new');
+}
 
 async function edit(req, res) {
   const meal = await Meal.findOne({_id: req.params.id, user: req.user._id});
   if (!meal) return res.redirect('/meals');
   res.render('meals/edit', { title: 'Edit Dish', meal });
 }
-
 
 async function deleteMeal(req, res) {
   await Meal.findOneAndDelete(
@@ -48,10 +63,8 @@ async function create(req, res) {
   res.redirect('/plans/new');
 }
 
-
 async function index(req, res) {
-  const meals = await Meal.find({ $or: [{ user: null }, { user: req.user._id }] });
-  
+  const meals = await Meal.find({ user: null });
   res.render('meals/index', { title: 'All Dishes', meals });
 }
 
