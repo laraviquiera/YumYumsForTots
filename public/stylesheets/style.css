@@ -230,6 +230,12 @@ select {
 
 /* view all dishes */
 
+.view-all {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: center;
+}
 
 .category {
   margin-bottom: 10px;
@@ -268,3 +274,7 @@ select {
   display: flex;
 }
 
+.accordion {
+  width: 80%;
+  margin: auto;
+}
