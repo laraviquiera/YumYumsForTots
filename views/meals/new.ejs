@@ -28,8 +28,9 @@
       <%= meal.name %>
       <% if (meal.user && meal.user.equals(user._id)) { %>
         <form action="/meals/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
-          <button type="submit">X</button>
+          <button type="submit">⛔</button>
         </form>
+        <a href="/meals/<%= meal._id %>/edit">🖋</a>
       <% } %>
     </li>
   <% }); %>

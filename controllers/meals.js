@@ -5,9 +5,15 @@ module.exports = {
   index,
   create,
   new: newMeal,
-  delete: deleteMeal
+  delete: deleteMeal,
+  edit
 };
 
+async function edit(req, res) {
+  const meal = await Meal.findOne({_id: req.params.id, user: req.user._id});
+  if (!meal) return res.redirect('/meals');
+  res.render('meals/edit', { title: 'Edit Dish', meal });
+}
 
 
 async function deleteMeal(req, res) {

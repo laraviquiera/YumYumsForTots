@@ -64,12 +64,16 @@ a {
   text-align: center;
   font-size: 20px;
   color: #747476;
-  padding: 30px 50px;
+  padding: 30px 50px 80px 50px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 }
 
+footer {
+  text-align: center;
+  margin: 40px;
+}
 
 /* MEAL PLANNER SECTION */
 
