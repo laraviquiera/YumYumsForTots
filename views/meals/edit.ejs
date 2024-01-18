@@ -1,20 +1,20 @@
 <%- include('../partials/header') %>
 
 <section class="new-dish-container">
-<h1 id="add-title">Edit your dish</h1>
+  <h1 id="add-title">Edit your dish</h1>
 
-<form id="new-form" action="/meals/<%= meal._id %>?_method=PUT" method="POST">
-  <label>Dish Name:</label>
-  <input type="text" name="name" value="<%= meal.name %>">
-  <label>Meal Type:</label>
-  <select name="mealType">
-    <option <%= meal.mealType === 'Breakfast' ? 'selected' : '' %> value="Breakfast">Breakfast</option>
-    <option <%= meal.mealType === 'Lunch' ? 'selected' : '' %> value="Lunch">Lunch</option>
-    <option <%= meal.mealType === 'Dinner' ? 'selected' : '' %> value="Dinner">Dinner</option>
-    <option <%= meal.mealType === 'Snack' ? 'selected' : '' %> value="Snack">Snack</option>
-  </select>
-  <button class="submit" type="submit">Update</button>
-</form>
+  <form id="new-form" action="/meals/<%= meal._id %>?_method=PUT" method="POST">
+    <label>Dish Name:</label>
+    <input type="text" name="name" value="<%= meal.name %>">
+    <label>Meal Type:</label>
+    <select name="mealType">
+      <option <%= meal.mealType === 'Breakfast' ? 'selected' : '' %> value="Breakfast">Breakfast</option>
+      <option <%= meal.mealType === 'Lunch' ? 'selected' : '' %> value="Lunch">Lunch</option>
+      <option <%= meal.mealType === 'Dinner' ? 'selected' : '' %> value="Dinner">Dinner</option>
+      <option <%= meal.mealType === 'Snack' ? 'selected' : '' %> value="Snack">Snack</option>
+    </select>
+    <button class="submit" type="submit">Update</button>
+  </form>
 </section>
 
 

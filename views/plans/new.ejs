@@ -3,270 +3,258 @@
 <h1 id="planner-title">Weekly Meal Planner</h1>
 
 <section class="container">
-  <form action="/plans" method="POST"> 
+  <form action="/plans" method="POST">
     <label for="plan-name">Plan Name:</label>
     <input type="text" name="title" placeholder="e.g. Week of Jan 22" required>
     <input class="submit" type="submit" value="Save Plan">
 
-<div class="meal-planner">
+    <div class="meal-planner">
 
-  <div></div>
-<!-- Days of the week titles -->
-  <div class="day-title">Monday</div>
-  <div class="day-title">Tuesday</div>
-  <div class="day-title">Wednesday</div>
-  <div class="day-title">Thursday</div>
-  <div class="day-title">Friday</div>
-  <div class="day-title">Saturday</div>
-  <div class="day-title">Sunday</div>
+      <div></div>
+      <div class="day-title">Monday</div>
+      <div class="day-title">Tuesday</div>
+      <div class="day-title">Wednesday</div>
+      <div class="day-title">Thursday</div>
+      <div class="day-title">Friday</div>
+      <div class="day-title">Saturday</div>
+      <div class="day-title">Sunday</div>
 
-<!-- MON BREAKFAST -->
-<div class="meal-type-title">Breakfast</div>
-<!-- Dish options for Breakfast -->
-<div class="dish-options">
-  <select name="monBrk">
-    <option>Select One</option>
-    <%- options.Breakfast %>
-  </select>
-</div>
+      <!-- MON BREAKFAST -->
+      <div class="meal-type-title">Breakfast</div>
+      <!-- Dish options for Breakfast -->
+      <div class="dish-options">
+        <select name="monBrk">
+          <option>Select One</option>
+          <%- options.Breakfast %>
+        </select>
+      </div>
 
-    <!-- TUE BREAKFAST -->
+      <!-- TUE BREAKFAST -->
 
-  <div class="dish-options">
-    <select name="tueBrk">
-      <option>Select One</option>
-      <%- options.Breakfast %>
-    </select>
-  </div>
+      <div class="dish-options">
+        <select name="tueBrk">
+          <option>Select One</option>
+          <%- options.Breakfast %>
+        </select>
+      </div>
 
-    <!-- WED BREAKFAST -->
-  <div class="dish-options">
-    <select name="wedBrk">
-      <option>Select One</option>
-      <%- options.Breakfast %>
-    </select>
-  </div>
+      <!-- WED BREAKFAST -->
+      <div class="dish-options">
+        <select name="wedBrk">
+          <option>Select One</option>
+          <%- options.Breakfast %>
+        </select>
+      </div>
 
-    <!-- THU BREAKFAST -->
-  <div class="dish-options">
-    <select name="thuBrk">
-      <option>Select One</option>
-      <%- options.Breakfast %>
-    </select>
-  </div>
+      <!-- THU BREAKFAST -->
+      <div class="dish-options">
+        <select name="thuBrk">
+          <option>Select One</option>
+          <%- options.Breakfast %>
+        </select>
+      </div>
 
-    <!-- FRI BREAKFAST -->
-  <div class="dish-options">
-    <select name="friBrk">
-      <option>Select One</option>
-      <%- options.Breakfast %>
-    </select>
-  </div>
+      <!-- FRI BREAKFAST -->
+      <div class="dish-options">
+        <select name="friBrk">
+          <option>Select One</option>
+          <%- options.Breakfast %>
+        </select>
+      </div>
 
-     <!-- SAT BREAKFAST -->
-  <div class="dish-options">
-    <select name="satBrk">
-      <option>Select One</option>
-      <%- options.Breakfast %>
-    </select>
-  </div>
+      <!-- SAT BREAKFAST -->
+      <div class="dish-options">
+        <select name="satBrk">
+          <option>Select One</option>
+          <%- options.Breakfast %>
+        </select>
+      </div>
 
-  <!-- SUN BREAKFAST -->
-  <div class="dish-options">
-    <select name="sunBrk">
-      <option>Select One</option>
-      <%- options.Breakfast %>
-    </select>
-  </div>
-  
+      <!-- SUN BREAKFAST -->
+      <div class="dish-options">
+        <select name="sunBrk">
+          <option>Select One</option>
+          <%- options.Breakfast %>
+        </select>
+      </div>
 
-<!-- LUNCH -->
-  
-  <!-- MON LUNCH -->
-  <div class="meal-type-title">Lunch</div>
-  <!-- Dish options for Breakfast -->
-  <div class="dish-options">
-    <select name="monLun">
-      <option>Select One</option>
-      <%- options.Lunch %>
-    </select>
-  </div>
+      <!-- MON LUNCH -->
+      <div class="meal-type-title">Lunch</div>
+      <!-- Dish options for Breakfast -->
+      <div class="dish-options">
+        <select name="monLun">
+          <option>Select One</option>
+          <%- options.Lunch %>
+        </select>
+      </div>
 
-    <!-- TUE LUNCH -->
+      <!-- TUE LUNCH -->
+      <div class="dish-options">
+        <select name="tueLun">
+          <option>Select One</option>
+          <%- options.Lunch %>
+        </select>
+      </div>
 
-  <div class="dish-options">
-    <select name="tueLun">
-      <option>Select One</option>
-      <%- options.Lunch %>
-    </select>
-  </div>
+      <!-- WED LUNCH -->
+      <div class="dish-options">
+        <select name="wedLun">
+          <option>Select One</option>
+          <%- options.Lunch %>
+        </select>
+      </div>
 
-    <!-- WED LUNCH -->
-  <div class="dish-options">
-    <select name="wedLun">
-      <option>Select One</option>
-      <%- options.Lunch %>
-    </select>
-  </div>
+      <!-- THU LUNCH -->
+      <div class="dish-options">
+        <select name="thuLun">
+          <option>Select One</option>
+          <%- options.Lunch %>
+        </select>
+      </div>
 
-    <!-- THU LUNCH -->
-  <div class="dish-options">
-    <select name="thuLun">
-      <option>Select One</option>
-      <%- options.Lunch %>
-    </select>
-  </div>
+      <!-- FRI LUNCH -->
+      <div class="dish-options">
+        <select name="friLun">
+          <option>Select One</option>
+          <%- options.Lunch %>
+        </select>
+      </div>
 
-    <!-- FRI LUNCH -->
-  <div class="dish-options">
-    <select name="friLun">
-      <option>Select One</option>
-      <%- options.Lunch %>
-    </select>
-  </div>
+      <!-- SAT LUNCH -->
+      <div class="dish-options">
+        <select name="satLun">
+          <option>Select One</option>
+          <%- options.Lunch %>
+        </select>
+      </div>
 
-     <!-- SAT LUNCH -->
-  <div class="dish-options">
-    <select name="satLun">
-      <option>Select One</option>
-      <%- options.Lunch %>
-    </select>
-  </div>
+      <!-- SUN LUNCH -->
+      <div class="dish-options">
+        <select name="sunLun">
+          <option>Select One</option>
+          <%- options.Lunch %>
+        </select>
+      </div>
 
-  <!-- SUN LUNCH -->
-  <div class="dish-options">
-    <select name="sunLun">
-      <option>Select One</option>
-      <%- options.Lunch %>
-    </select>
-  </div>
-  
-  <!-- DINNER -->
-  
-  <!-- MON DINNER -->
-  <div class="meal-type-title">Dinner</div>
-  <div class="dish-options">
-    <select name="monDin">
-      <option>Select One</option>
-      <%- options.Dinner %>
-    </select>
-  </div>
+      <!-- MON DINNER -->
+      <div class="meal-type-title">Dinner</div>
+      <div class="dish-options">
+        <select name="monDin">
+          <option>Select One</option>
+          <%- options.Dinner %>
+        </select>
+      </div>
 
-    <!-- TUE DINNER -->
-  <div class="dish-options">
-    <select name="tueDin">
-      <option>Select One</option>
-      <%- options.Dinner %>
-    </select>
-  </div>
+      <!-- TUE DINNER -->
+      <div class="dish-options">
+        <select name="tueDin">
+          <option>Select One</option>
+          <%- options.Dinner %>
+        </select>
+      </div>
 
-    <!-- WED DINNER -->
-  <div class="dish-options">
-    <select name="wedDin">
-      <option>Select One</option>
-      <%- options.Dinner %>
-    </select>
-  </div>
+      <!-- WED DINNER -->
+      <div class="dish-options">
+        <select name="wedDin">
+          <option>Select One</option>
+          <%- options.Dinner %>
+        </select>
+      </div>
 
-    <!-- THU DINNER -->
-  <div class="dish-options">
-    <select name="thuDin">
-      <option>Select One</option>
-      <%- options.Dinner %>
-    </select>
-  </div>
+      <!-- THU DINNER -->
+      <div class="dish-options">
+        <select name="thuDin">
+          <option>Select One</option>
+          <%- options.Dinner %>
+        </select>
+      </div>
 
-    <!-- FRI DINNER -->
-  <div class="dish-options">
-    <select name="friDin">
-      <option>Select One</option>
-      <%- options.Dinner %>
-    </select>
-  </div>
+      <!-- FRI DINNER -->
+      <div class="dish-options">
+        <select name="friDin">
+          <option>Select One</option>
+          <%- options.Dinner %>
+        </select>
+      </div>
 
-     <!-- SAT DINNER -->
-  <div class="dish-options">
-    <select name="satDin">
-      <option>Select One</option>
-      <%- options.Dinner %>
-    </select>
-  </div>
+      <!-- SAT DINNER -->
+      <div class="dish-options">
+        <select name="satDin">
+          <option>Select One</option>
+          <%- options.Dinner %>
+        </select>
+      </div>
 
-  <!-- SUN DINNER -->
-  <div class="dish-options">
-    <select name="sunDin">
-      <option>Select One</option>
-      <%- options.Dinner %>
-    </select>
-  </div>
+      <!-- SUN DINNER -->
+      <div class="dish-options">
+        <select name="sunDin">
+          <option>Select One</option>
+          <%- options.Dinner %>
+        </select>
+      </div>
 
+      <!-- MON SNACK -->
+      <div class="meal-type-title">Snack</div>
+      <!-- Dish options for Breakfast -->
+      <div class="dish-options">
+        <select name="monSnk">
+          <option>Select One</option>
+          <%- options.Snack %>
+        </select>
+      </div>
 
-    <!-- SNACK-->
-  
-  <!-- MON SNACK -->
-  <div class="meal-type-title">Snack</div>
-  <!-- Dish options for Breakfast -->
-  <div class="dish-options">
-    <select name="monSnk">
-      <option>Select One</option>
-      <%- options.Snack %>
-    </select>
-  </div>
+      <!-- TUE SNACK -->
+      <div class="dish-options">
+        <select name="tueSnk">
+          <option>Select One</option>
+          <%- options.Snack %>
+        </select>
+      </div>
 
-    <!-- TUE SNACK -->
-  <div class="dish-options">
-    <select name="tueSnk">
-      <option>Select One</option>
-      <%- options.Snack %>
-    </select>
-  </div>
+      <!-- WED SNACK -->
+      <div class="dish-options">
+        <select name="wedSnk">
+          <option>Select One</option>
+          <%- options.Snack %>
+        </select>
+      </div>
 
-    <!-- WED SNACK -->
-  <div class="dish-options">
-    <select name="wedSnk">
-      <option>Select One</option>
-      <%- options.Snack %>
-    </select>
-  </div>
+      <!-- THU SNACK -->
+      <div class="dish-options">
+        <select name="thuSnk">
+          <option>Select One</option>
+          <%- options.Snack %>
+        </select>
+      </div>
 
-    <!-- THU SNACK -->
-  <div class="dish-options">
-    <select name="thuSnk">
-      <option>Select One</option>
-      <%- options.Snack %>
-    </select>
-  </div>
+      <!-- FRI SNACK -->
+      <div class="dish-options">
+        <select name="friSnk">
+          <option>Select One</option>
+          <%- options.Snack %>
+        </select>
+      </div>
 
-    <!-- FRI SNACK -->
-  <div class="dish-options">
-    <select name="friSnk">
-      <option>Select One</option>
-      <%- options.Snack %>
-    </select>
-  </div>
+      <!-- SAT SNACK -->
+      <div class="dish-options">
+        <select name="satSnk">
+          <option>Select One</option>
+          <%- options.Snack %>
+        </select>
+      </div>
 
-     <!-- SAT SNACK -->
-  <div class="dish-options">
-    <select name="satSnk">
-      <option>Select One</option>
-      <%- options.Snack %>
-    </select>
-  </div>
-
-  <!-- SUN SNACK -->
-  <div class="dish-options">
-    <select name="sunSnk">
-      <option>Select One</option>
-      <%- options.Snack %>
-    </select>
-  </div>
-</form>
+      <!-- SUN SNACK -->
+      <div class="dish-options">
+        <select name="sunSnk">
+          <option>Select One</option>
+          <%- options.Snack %>
+        </select>
+      </div>
+  </form>
 </section>
 
 
 <div class="add-dish">
   <a href="/meals/new">Add, Edit or Delete a Dish</a>
 </div>
-
-
 <%- include('../partials/footer') %>

@@ -188,16 +188,49 @@ select {
   padding-bottom: 20px;
 }
 
-.my-plans {
-  font-size: 20px;
-}
 
 .added-dishes {
   color: #A675A1;
 }
 
 
+/* List of saved plans */
+
+.my-plans-container {
+  margin: 5vh;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  background: url('https://i.imgur.com/QZgaXt6.png');
+  background-size: cover;
+}
+
+.my-plans {
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+}
+
+.plan-list {
+  font-size: 20px;
+  text-align: center;
+  list-style-type: none;
+  padding: 10px;
+}
+
+.plan-list li {
+  margin: 20px;
+}
+
 /* view all dishes */
+
+
 .category {
   margin-bottom: 10px;
   padding: 10px 50px;

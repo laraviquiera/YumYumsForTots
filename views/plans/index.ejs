@@ -1,15 +1,19 @@
 <%- include('../partials/header') %>
 
-<h3 class="my-plans">MY MEAL PLANS</h3>
+<section class="my-plans-container">
 
-<ul>
+  <h3 class="my-plans">MY MEAL PLANS</h3>
+
+  <ul class="plan-list">
     <% userPlans.forEach(plan => { %>
-      <li>
-        <a href="/plans/<%= plan._id %>">
-          <%= plan.title %>
-        </a>
-      </li> 
+    <li>
+      🥣 <a href="/plans/<%= plan._id %>">
+        <%= plan.title %>
+      </a>
+    </li>
     <% }); %>
-</ul>
+  </ul>
+
+</section>
 
 <%- include('../partials/footer') %>
