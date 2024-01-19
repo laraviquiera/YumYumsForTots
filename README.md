@@ -5,10 +5,12 @@ YumYums for Tots is an app designed to help you plan your little one's weekly me
 
 ---
 ## Screenshot
-![yumyums preview](https://i.imgur.com/85hPuT5.png)
-![yumyums preview](https://i.imgur.com/WY64FAv.png)
-![yumyums preview](https://i.imgur.com/AdaSBw5.png)
-![yumyums preview](https://i.imgur.com/IlcpLPx.png)
+![yumyums preview](https://i.imgur.com/Q7cZlRQ.png)
+![yumyums preview](https://i.imgur.com/DjXAj1g.png)
+![yumyums preview](https://i.imgur.com/XGcFOxl.png)
+![yumyums preview](https://i.imgur.com/SNctghs.png)
+![yumyums preview](https://i.imgur.com/SBbEZJm.png)
+![yumyums preview](https://i.imgur.com/VBMzMds.png)
 
 ---
 ## Technologies Used

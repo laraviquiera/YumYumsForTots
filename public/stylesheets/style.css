@@ -299,28 +299,29 @@ select {
 .my-plans-container {
   margin: 5vh;
   width: 80%;
+  height: 100vh;
   margin: auto;
   font-size: 20px;
-  padding: 50px;
+  padding: 50px 10px 100px;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-  background: url('https://i.imgur.com/QZgaXt6.png');
+  background: url('https://i.imgur.com/5OfYCMw.png');
   background-size: cover;
 }
 
 .my-plans {
   font-size: 30px;
-  color: #A675A1;
-  text-align: center;
-  padding: 10px;
+  color: #808aba;
+  padding: 10px 30px;
+  margin-left: 200px;
 }
 
 .plan-list {
   font-size: 20px;
-  text-align: center;
   list-style-type: none;
-  padding: 10px;
+  padding: 10px 30px;
+  margin-left: 200px;
 }
 
 .plan-list li {
@@ -329,7 +330,7 @@ select {
 
 .plan-list li a{
   margin: 10px;
-  color: #566195;
+  color: #808aba;
 }
 
 .plan-list li a:hover {
