@@ -25,7 +25,6 @@ nav a:hover {
 }
 
 
-
 .main-logo {
   text-align: center;
   margin: 0 auto;
@@ -71,10 +70,9 @@ nav a:hover {
   margin: 5vh;
   display: flexbox;
   justify-content: center;
-  align-items: center;
   text-align: center;
   font-size: 20px;
-  color: #606063;
+  color: #414144;
   padding: 30px 50px 80px 50px;
   background-color: white;
   border-radius: 20px;
@@ -205,6 +203,10 @@ select {
   margin: 5px;
 }
 
+#form-input input {
+  font-size: 15px;
+  padding: 5px;
+}
 
 .submit {
   background-color: #A675A1;
@@ -336,7 +338,6 @@ select {
 }
 
 /* view all dishes */
-
 
 .view-all {
  display: flex;

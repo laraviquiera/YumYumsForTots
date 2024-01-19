@@ -5,18 +5,20 @@
 
   <p id="note">If you can't find your desired dish on the list. You can add your own and it'll be added to the drop-down menu option</p>
 
-  <form id="new-form" action="/meals" method="POST">
-    <label>Dish Name:</label>
-    <input type="text" name="name" placeholder="Overnight Oats">
-    <label>Meal Type:</label>
-    <select name="mealType">
-      <option value="Breakfast">Breakfast</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Dinner">Dinner</option>
-      <option value="Snack">Snack</option>
-    </select>
-    <input class="submit" type="submit" value="Add a Dish">
-  </form>
+  <div id="form-input">
+    <form id="new-form" action="/meals" method="POST">
+      <label>Dish Name:</label>
+      <input type="text" name="name" placeholder="e.g. Overnight Oats">
+      <label>Meal Type:</label>
+      <select name="mealType">
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="Dinner">Dinner</option>
+        <option value="Snack">Snack</option>
+      </select>
+      <input class="submit" type="submit" value="Add a Dish">
+    </form>
+  </div>
 </section>
 
 <section class="added-dishes">
