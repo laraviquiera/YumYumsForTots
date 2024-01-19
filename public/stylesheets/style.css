@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #175764;
 }
 
 body {
+  min-height: 100vh;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: url('https://i.imgur.com/QZgaXt6.png');
@@ -14,6 +14,17 @@ body {
 a {
   color: rgb(11, 120, 150);
 }
+
+nav a {
+  color: rgb(11, 120, 150);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #A675A1;
+}
+
+
 
 .main-logo {
   text-align: center;
@@ -63,7 +74,7 @@ a {
   align-items: center;
   text-align: center;
   font-size: 20px;
-  color: #747476;
+  color: #606063;
   padding: 30px 50px 80px 50px;
   background-color: white;
   border-radius: 20px;
@@ -141,14 +152,45 @@ select {
   display: block;
   backdrop-filter: blur(15px);
   background: rgba(255,255,255,0.2);
-  padding: 10px 30px;
+  padding: 20px 30px;
 }
 
 .add-dish {
   color: #085863;
   font-size: 15px;
   text-align: center;
+  margin-top: 30px;
 }
+
+.add-dish a {
+  background-color: #A675A1;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s; 
+  font-size: 13px;
+  margin: 20px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.add-dish a:hover {
+  background-color: white;;
+  color: #A675A1;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s; 
+  font-size: 13px;
+  margin: 20px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 #new-form {
   font-size: 20px;
@@ -162,6 +204,7 @@ select {
   color: #A675A1;
   margin: 5px;
 }
+
 
 .submit {
   background-color: #A675A1;
@@ -177,7 +220,22 @@ select {
   cursor: pointer;
 }
 
+.submit:hover {
+  background-color: white;
+  color: #A675A1;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s; 
+  font-size: 13px;
+  margin: 20px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 #add-title {
+  font-size: 30px;
   margin: 10px;
   color: #A675A1;
 }
@@ -188,8 +246,48 @@ select {
   padding-bottom: 20px;
 }
 
+/* List of Added Dishes  */
 
 .added-dishes {
+  color: #A675A1;
+  display: block;
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.2);
+  padding: 50px 30px;
+}
+
+.added-dishes p {
+  color: #A675A1;
+  font-size: 15px;
+}
+
+.added-dishes li {
+  color: #A675A1;
+  font-size: 20px;
+}
+
+.added-dishes button  {
+  color: gray;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 0;
+  font-size: 20px;
+}
+
+.added-dishes button:hover  {
+  border-radius: 10px;
+  border: 0;
+  font-size: 20px;
+  color: #A675A1;
+}
+
+.added-dishes a  {
+  padding-left: 0;
+  color: gray;
+}
+
+.added-dishes a:hover  {
+  padding-left: 0;
   color: #A675A1;
 }
 
@@ -198,10 +296,8 @@ select {
 
 .my-plans-container {
   margin: 5vh;
-  display: flexbox;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  width: 80%;
+  margin: auto;
   font-size: 20px;
   padding: 50px;
   background-color: white;
@@ -212,7 +308,8 @@ select {
 }
 
 .my-plans {
-  font-size: 40px;
+  font-size: 30px;
+  color: #A675A1;
   text-align: center;
   padding: 10px;
 }
@@ -225,10 +322,21 @@ select {
 }
 
 .plan-list li {
-  margin: 20px;
+  padding: 10px;
+}
+
+.plan-list li a{
+  margin: 10px;
+  color: #566195;
+}
+
+.plan-list li a:hover {
+  margin: 10px;
+  color: #A675A1;
 }
 
 /* view all dishes */
+
 
 .view-all {
  display: flex;
@@ -256,6 +364,7 @@ select {
   font-weight: bold;
   font-size: 15px;
   text-align: center;
+  color: rgb(155, 151, 147);
 }
 
 .dish-img img {
@@ -270,11 +379,31 @@ select {
   text-align: center;
 }
 
+.ref-url a:hover {
+  margin-top: 10px;
+  text-align: center;
+  color: #A675A1;
+}
+
 .accordion-meal {
   display: flex;
 }
 
 .accordion {
+  --bs-accordion-btn-bg: #566195;
+  --bs-accordion-active-bg: #7681B3;
   width: 80%;
   margin: auto;
+}
+
+.category a {
+  color: black;
+}
+
+.category a:hover {
+color: black;
+}
+
+.accordion-header .accordion-button {
+  color: #ffffff;
 }

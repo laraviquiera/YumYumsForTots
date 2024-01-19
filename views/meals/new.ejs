@@ -7,7 +7,7 @@
 
   <form id="new-form" action="/meals" method="POST">
     <label>Dish Name:</label>
-    <input type="text" name="name">
+    <input type="text" name="name" placeholder="Overnight Oats">
     <label>Meal Type:</label>
     <select name="mealType">
       <option value="Breakfast">Breakfast</option>
@@ -28,9 +28,9 @@
       <%= meal.name %>
       <% if (meal.user && meal.user.equals(user._id)) { %>
       <form action="/meals/<%= meal._id %>?_method=DELETE" method="POST" style="display: inline;">
-        <button type="submit">⛔</button>
+        <button type="submit"><i class='bx bx-trash bx-tada-hover' ></i></button>
       </form>
-      <a href="/meals/<%= meal._id %>/edit">🖋</a>
+      <a href="/meals/<%= meal._id %>/edit"><i class='bx bxs-edit-alt bx-tada-hover' ></i></a>
       <% } %>
     </li>
     <% }); %>
