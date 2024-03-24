@@ -14,8 +14,6 @@ const data = require('./data');
     // Save the promises (or call right in the array if feeling frisky)
     const p1 = Meal.deleteMany({});
     
-    // Promise.all will return a single promise that resolves
-    // only after all of the array's promises resolve
     let results = await Promise.all([p1]);
     // results will be an array of result objects!
     console.log(results);
@@ -26,19 +24,5 @@ const data = require('./data');
     ]);
     console.log('Created dish:', results[0]);
   
-//     // Associate Mark Hamill with Star Wars - A New Hope
-//     results = await Promise.all([
-//       // Using regular expressions allows a partial match
-//       Meal.findOne({ title: /Star / }),
-//       Plans.findOne({ name: /Mark / })
-//     ]);
-//     // One day we'll destructure results like this: const [starWars, mark] = results;
-//     const starWars = results[0];
-//     const mark = results[1];
-//     starWars.cast.push(mark._id);
-//     await starWars.save();
-//     console.log('Star Wars with Mark Hamill', starWars);
-  
-    // Lastly, use process.exit() to "cleanly" shut down the Node program
     process.exit();
   })();

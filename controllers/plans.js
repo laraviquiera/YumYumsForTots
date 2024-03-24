@@ -29,8 +29,7 @@ async function create(req, res) {
   res.redirect('/plans');
 }
 
-
- async function newPlan(req, res) {
+async function newPlan(req, res) {
   // Use the same query as in the meals index action to prevent users from seeing other user's custom meals
   const meals = await Meal.find({ $or: [{ user: null }, { user: req.user._id }] }).sort('-user name');
   // options object will have a property for each mealType
